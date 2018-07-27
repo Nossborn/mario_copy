@@ -35,7 +35,6 @@ public class Screen {
 						game.setPixel((xScaled + x1) + (yScaled + y1) * widthScaled, pixel);
 					}
 				}
-
 			}
 		}
 	}

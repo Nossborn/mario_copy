@@ -6,7 +6,7 @@ import Game.Game;
 import Game.Input.Keyboard;
 import Game.Screen.Screen;
 
-public class Player {
+public class Player extends Mob{
 	private int playerSize = 24;
 	private double xPos = 0;
 	private double yPos = 0;
@@ -58,12 +58,17 @@ public class Player {
 	}
 
 	private boolean[] collisions() {
-		// 0 Up, 1 Right, 2 Down, 3 Left
-		for (int i = 0; i < collisions.length; i++)
+		// Index: 0 - Up, 1 - Right, 2 - Down, 3 - Left
+		for (int i = 0; i < collisions.length; i++) {
 			collisions[i] = false;
+		}
 
 		if (yPos <= baseLevel) collisions[2] = true;
 		return collisions;
+	}
+
+	private int[] getBlockColliCords(int x1, int y1, int x2, int y2) {
+	    return null;
 	}
 
 	public void render() {
