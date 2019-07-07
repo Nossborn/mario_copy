@@ -4,8 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/Game/Mobs/Mob.java" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e475440-4409-4820-9b34-b26d2e0dc13e" name="Default" comment="Implemented collisions for blocks">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Victor.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Victor.xml" />
+    <list default="true" id="4e475440-4409-4820-9b34-b26d2e0dc13e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario_copy/Game/Game.class" afterPath="$PROJECT_DIR$/out/production/Mario_copy/Game/Game.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario_copy/Game/Level/Blocks/VoidBlock.class" afterPath="$PROJECT_DIR$/out/production/Mario_copy/Game/Level/Blocks/VoidBlock.class" />
@@ -502,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562522749640</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented collisions for blocks">
+      <created>1562522780754</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562522780754</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
