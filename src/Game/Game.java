@@ -11,8 +11,6 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 
-//TODO Add - collision for blocks
-
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 
@@ -46,7 +44,7 @@ public class Game extends Canvas implements Runnable {
 		addKeyListener(key);
 
 		level = Level.spawn;
-		player = new Player(screen, key, 30, 30);
+		player = new Player(level, screen, key, 30, 30);
 	}
 
 	private void start() {
@@ -113,8 +111,11 @@ public class Game extends Canvas implements Runnable {
 		screen.renderAtScale(game);
 		Graphics g = bs.getDrawGraphics();
 		g.drawImage(finalImage, 0, 0, getWidth(), getHeight(), null);
+
 		g.drawString((int) player.getX() + ":x | " + (int) player.getY() + ":y", 10, 20);
-		g.drawString((int) player.getVelX() + ":xV | " + (int) player.getVelY() + ":yV", 10, 40);
+		g.drawString(player.getVelX() + ":xV | " + player.getVelY() + ":yV", 10, 40);
+		g.drawString((int) player.getX()/Level.blockSize + ":xB | " + (int) player.getY()/Level.blockSize + ":yB", 10, 60);
+
 		g.dispose();
 		bs.show();
 	}
@@ -126,6 +127,7 @@ public class Game extends Canvas implements Runnable {
 	private void update() {
 		key.update();
 		player.update();
+		level.update();
 	}
 
 	public static void main(String[] args) {

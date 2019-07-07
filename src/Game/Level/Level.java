@@ -7,32 +7,32 @@ public class Level {
 
 	protected int height, width;
 	private static String backgroundPath = "res/background.png";
-	private static String levelPath = "res/map1.png";
+	private static String levelPath = "res/map-1.png";
 	protected Block[] blocks;
 
-	protected static int blockSize = 16;
-	private boolean[] collisions = new boolean[4];
+	public static int blockSize = 16;
 	public static Level spawn = new SpawnLevel(levelPath);
 
 	public Level() {
 	}
 
-/*	// Why should this be in the level class instead of Block class? it shouldn't
-	public boolean[] blockCollision(int x1, int y1, int x2, int y2) {
-		for (int i = 0; i < collisions.length; i++)
-			collisions[i] = false;
-		return collisions;
+	public void update() {
 	}
-*/
+
 	public void render(Screen screen) {
 		screen.renderScroll(Screen.load(backgroundPath), 0, 0, false);
 		renderBlocks(screen);
 	}
 
 	private void renderBlocks(Screen screen) {
-		for (int i = 0; i < blocks.length; i++) {
-			blocks[i].render(screen);
+		for (Block block : blocks) {
+			block.render(screen);
 		}
+	}
+
+	public boolean getColliBlocks(int x, int y) {
+		if(x < 0 || y < 0 || x >= width || y >= height) return false;
+		return blocks[(y)*width + x].isCollidable();
 	}
 
 }

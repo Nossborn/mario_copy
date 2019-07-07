@@ -39,11 +39,14 @@ public class Screen {
 		}
 	}
 
+	// Scrolling means it repeats horizontally infinitely
 	public void renderScroll(BufferedImage image, int x, int y, boolean fixed) {
+		// Does it even make sense for something that scrolls to be fixed to the screen?
 		if (!fixed) {
 			x -= xOffset;
 			y -= yOffset;
 		}
+
 		for (int ypx = 0; ypx < image.getHeight(); ypx++) {
 			int ya = ypx + y;
 			if (ya < 0 || ya >= height) continue;
@@ -60,7 +63,8 @@ public class Screen {
 	}
 
 	public void render(BufferedImage image, int x, int y, boolean fixed) {
-		if (!fixed) {
+	    y = height - y;
+	    if (!fixed) {
 			x -= xOffset;
 			y -= yOffset;
 		}

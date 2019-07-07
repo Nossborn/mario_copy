@@ -8,8 +8,7 @@ import Game.Level.Blocks.VoidBlock;
 import Game.Screen.Screen;
 
 public class SpawnLevel extends Level {
-	private int width;
-	private int height;
+
 	private int[] blocksCol;
 
 	public SpawnLevel(String path) {
@@ -30,8 +29,8 @@ public class SpawnLevel extends Level {
 	private void setBlocks() {
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
-				int blockCol = blocksCol[x + y * width];
-				blocks[x + y * width] = block(blockCol, x * blockSize, y * blockSize);
+				int blockCol = blocksCol[x + (height - 1 - y) * width];
+				blocks[x + y * width] = block(blockCol, x * blockSize, (y) * blockSize);
 			}
 		}
 	}
