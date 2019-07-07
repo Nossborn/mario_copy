@@ -508,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562522780754</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented collision for blocks">
+      <created>1562522827053</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562522827053</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -603,7 +610,8 @@
     <MESSAGE value="Updated some visibility problems and fixed some spelling&#10;Added Mob class" />
     <MESSAGE value="Updated resources" />
     <MESSAGE value="Implemented collisions for blocks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented collisions for blocks" />
+    <MESSAGE value="Implemented collision for blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented collision for blocks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
