@@ -17,7 +17,7 @@ public class Game extends Canvas implements Runnable {
 	private String title = "Mario Copy";
 	public static int WIDTH = 300;
 	public static int HEIGHT = 160;
-	private static int SCALE = 3;
+	private static int SCALE = 4;
 
 	private boolean running = false;
 	private static Game game;
